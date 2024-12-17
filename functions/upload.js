@@ -321,7 +321,7 @@ async function uploadFileToTelegram(env, formdata, fullId, metadata, fileExt, fi
                 JSON.stringify([{ 'src': `/file/${fullId}` }]), 
                 {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' }
+                    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
                 }
             );
         }
