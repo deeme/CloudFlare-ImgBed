@@ -235,7 +235,7 @@ async function uploadFileToCloudflareR2(env, formdata, fullId, metadata) {
         JSON.stringify([{ 'src': `/file/${fullId}` }]), 
         {
             status: 200,
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
         }
     );
 }
